@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepak Soneja - Interactive Resume</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-gray-100 text-gray-800 antialiased relative">
+
+    <!-- Interactive Background Canvas -->
+    <canvas id="interactive-bg"></canvas>
+
+    <div class="container mx-auto p-4 sm:p-8 relative z-10">
+        <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-10 border-t-8 border-indigo-600">
+            <!-- Header Section -->
+            <header class="text-center mb-12 border-b pb-6">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-indigo-600 mb-2">Deepak Soneja</h1>
+                <p class="text-xl sm:text-2xl font-medium text-gray-600">General Manager & Financial Professional</p>
+                <div class="mt-4 text-gray-500">
+                    <span class="inline-block mx-2"><i class="fas fa-phone-alt"></i> (91) 7080431955</span>
+                    <span class="inline-block mx-2"><i class="fas fa-envelope"></i> deepaksoneja1971@email.com</span>
+                </div>
+            </header>
+
+            <!-- Summary Section -->
+            <section class="mb-10">
+                <h2 class="text-3xl font-bold text-gray-700 mb-4 border-b-2 pb-2">Summary</h2>
+                <p class="text-lg leading-relaxed text-gray-600">
+                    Results-driven professional with diverse experience in leadership and finance. As a General Manager, I have 7+ years of experience in leading cross-functional teams, driving business growth, and optimizing operations in the nutrition industry. As an Internal Accountant, I have 35+ years of experience in financial analysis, internal controls, and compliance. Proven track record of enhancing profitability, improving efficiency, and fostering strategic partnerships. Seeking to leverage my expertise in a leadership role to drive organizational success and innovation.
+                </p>
+            </section>
+
+            <!-- Professional Experience Section -->
+            <section class="mb-10">
+                <h2 class="text-3xl font-bold text-gray-700 mb-4 border-b-2 pb-2">Professional Experience</h2>
+
+                <!-- General Manager -->
+                <div class="job-item mb-8 p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <div class="flex items-center justify-between cursor-pointer" onclick="toggleDetails(this)">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">General Manager</h3>
+                            <p class="text-md text-gray-500">Paras Nutrients Pvt. Ltd., Pune</p>
+                        </div>
+                        <i class="fas fa-chevron-down text-gray-400 toggle-icon transition-transform duration-300"></i>
+                    </div>
+                    <div class="details-content hidden mt-4 pl-6 border-l-2 border-gray-200">
+                        <h4 class="font-semibold text-gray-700 mb-2">Key Achievements:</h4>
+                        <ul class="list-disc list-inside space-y-1 text-gray-600">
+                            <li>Increased sales revenue by 30% through strategic market analysis and team leadership.</li>
+                            <li>Implemented cost-saving initiatives that reduced production costs by 15%.</li>
+                            <li>Developed and executed a comprehensive business strategy that expanded market share by 25%.</li>
+                        </ul>
+                        <h4 class="font-semibold text-gray-700 mt-4 mb-2">Responsibilities:</h4>
+                        <ul class="list-disc list-inside space-y-1 text-gray-600">
+                            <li>Led cross-functional teams to achieve business objectives and targets.</li>
+                            <li>Managed P&L, budgets, and financial performance.</li>
+                            <li>Developed and maintained strategic partnerships with suppliers and distributors.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Internal Accountant -->
+                <div class="job-item mb-8 p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <div class="flex items-center justify-between cursor-pointer" onclick="toggleDetails(this)">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Internal Accountant</h3>
+                            <p class="text-md text-gray-500">Royal Cafe, Hazratganj, Lucknow & MODELLA Bakery, Charbagh, Lucknow</p>
+                        </div>
+                        <i class="fas fa-chevron-down text-gray-400 toggle-icon transition-transform duration-300"></i>
+                    </div>
+                    <div class="details-content hidden mt-4 pl-6 border-l-2 border-gray-200">
+                        <h4 class="font-semibold text-gray-700 mb-2">Key Achievements:</h4>
+                        <ul class="list-disc list-inside space-y-1 text-gray-600">
+                            <li>Implemented a new financial reporting system that reduced month-end close by 20%.</li>
+                            <li>Conducted internal audits and ensured 100% compliance with regulatory requirements.</li>
+                            <li>Collaborated with the finance team to develop a cost-saving initiative, saving annually.</li>
+                        </ul>
+                        <h4 class="font-semibold text-gray-700 mt-4 mb-2">Responsibilities:</h4>
+                        <ul class="list-disc list-inside space-y-1 text-gray-600">
+                            <li>Managed financial reporting, budgeting, and forecasting.</li>
+                            <li>Analyzed financial data and provided insights to senior management.</li>
+                            <li>Ensured compliance with internal controls and SOX regulations.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Senior Accountant -->
+                <div class="job-item p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <div class="flex items-center justify-between cursor-pointer" onclick="toggleDetails(this)">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Senior Accountant</h3>
+                            <p class="text-md text-gray-500">Paras Nutrients, Pune</p>
+                        </div>
+                        <i class="fas fa-chevron-down text-gray-400 toggle-icon transition-transform duration-300"></i>
+                    </div>
+                    <div class="details-content hidden mt-4 pl-6 border-l-2 border-gray-200">
+                        <h4 class="font-semibold text-gray-700 mb-2">Key Achievements:</h4>
+                        <ul class="list-disc list-inside space-y-1 text-gray-600">
+                            <li>Streamlined accounts payable and receivable processes, reducing payment delays by 30%.</li>
+                            <li>Led a team in preparing annual financial statements and budgets.</li>
+                            <li>Identified and resolved discrepancies in financial records, improving accuracy by 25%.</li>
+                        </ul>
+                        <h4 class="font-semibold text-gray-700 mt-4 mb-2">Responsibilities:</h4>
+                        <ul class="list-disc list-inside space-y-1 text-gray-600">
+                            <li>Managed financial transactions and ensured accurate record-keeping.</li>
+                            <li>Conducted variance analysis and provided recommendations for improvement.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="mb-10">
+                <h2 class="text-3xl font-bold text-gray-700 mb-4 border-b-2 pb-2">Education</h2>
+                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-800">Bachelor of Commerce</h3>
+                    <p class="text-md text-gray-500">KKC</p>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section>
+                <h2 class="text-3xl font-bold text-gray-700 mb-4 border-b-2 pb-2">Skills</h2>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Leadership and team management</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Strategic planning and execution</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Financial analysis and reporting</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Internal controls and compliance</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Auditing (internal and external)</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Financial planning and budgeting</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">ERP systems (SAP, Oracle)</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">MS Office (Excel, PowerPoint, Word)</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Supply chain management</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Market analysis and business development</span>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+<script src="./js/script.js"></script>
+
+</body>
+</html>
